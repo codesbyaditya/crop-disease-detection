@@ -17,6 +17,10 @@ def model_prediction(test_image):
 
 
 # Prediction Page
+app_mode = st.sidebar.selectbox(
+    "Choose the App Mode",
+    ["Home", "Disease Recognition"]
+)
 if app_mode == "Disease Recognition":
     st.header("Disease Recognition")
 
