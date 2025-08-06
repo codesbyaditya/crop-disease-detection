@@ -1,6 +1,7 @@
 import streamlit as st
 import tensorflow as tf
 import numpy as np
+from PIL import Image
 
 
 # Tensorflow Model Prediction
@@ -21,7 +22,8 @@ app_mode = st.sidebar.selectbox("Select Page", ["Home", "About", "Disease Recogn
 if (app_mode == "Home"):
     st.header("PLANT DISEASE RECOGNITION SYSTEM")
     image_path = "home_page.jpeg"
-    st.image(image_path, use_column_width=True)
+    image = Image.open(image_path)
+    st.image(image, use_column_width=True)
     st.markdown("""
     Welcome to the Plant Disease Recognition System! 🌿🔍
 
